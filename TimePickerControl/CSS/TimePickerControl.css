@@ -1,0 +1,177 @@
+/* Main container */
+.time-picker-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    width: 320px;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Time Input Section */
+.time-input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* Time display (editable hours & minutes) */
+.time-display {
+    display: flex;
+    align-items: center;
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+}
+
+.time-display span {
+    padding: 5px 10px;
+    border-radius: 5px;
+    min-width: 50px;
+    text-align: center;
+    transition: all 0.2s ease-in-out;
+}
+
+/* Editable Time */
+.editable-time {
+    outline: none;
+    border-bottom: 2px solid transparent;
+}
+
+.editable-time:focus {
+    border-bottom: 2px solid #6200ea;
+    background: rgba(98, 0, 234, 0.1);
+    border-radius: 4px;
+}
+
+/* AM/PM Toggle */
+.ampm-toggle-container {
+    display: flex;
+    gap: 8px;
+}
+
+.ampm-toggle {
+    background: #e0e0e0;
+    color: #333;
+    border: 1px solid #6200ea;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.ampm-toggle.active {
+    background: #6200ea;
+    color: white;
+}
+
+.ampm-toggle:hover {
+    background: #9c47ff;
+    color: white;
+}
+
+/* Circular Clock Face */
+.clock-face {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: #f1f1f1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Clock Hand */
+
+    .clock-hand {
+        position: absolute;
+        top: 23px;
+        width: 3px;
+        height: 80px;
+        background: #6200ea;
+        transform-origin: bottom;
+        transition: transform 0.3s ease-in-out;
+    }
+
+
+/* Hour Buttons */
+.hour-button {
+    position: absolute;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: white;
+    color: black;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.hour-button.selected {
+    background: #6200ea;
+    color: white;
+    transform: scale(1.2);
+}
+
+.hour-button:hover {
+    background: #9c47ff;
+    color: white;
+}
+
+/* Footer Buttons */
+.footer-buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px 0;
+}
+
+.footer-buttons button {
+    border: none;
+    background: transparent;
+    color: #6200ea;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.footer-buttons button:hover {
+    color: #9c47ff;
+    text-decoration: underline;
+}
+
+/* OK & CANCEL Buttons */
+.cancel-button {
+    color: #ff1744;
+}
+
+.ok-button {
+    color: #6200ea;
+    font-weight: bold;
+}
+
+.ok-button:hover {
+    color: #9c47ff;
+}
+
+.cancel-button:hover {
+    color: #d50000;
+}
